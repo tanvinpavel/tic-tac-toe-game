@@ -1,0 +1,245 @@
+body{
+    position: relative;
+}
+.main-heading{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: tahoma;
+}
+.tic{
+    color: rgb(12, 153, 24);
+}
+.tos{
+    color: rgb(255, 108, 50);
+}
+.container{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    background-color: transparent;
+    border: none;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    display: inline;
+}
+table{
+    margin-top: 100px;
+    border: 10px solid transparent;
+    border-collapse: collapse;
+    min-width: 324px;
+    position: relative;
+}
+
+
+td{
+    border: 9px solid black;
+    border-collapse: collapse;
+}
+
+tr:last-child{
+    border-bottom: 10px solid transparent;
+}
+.blackTeam{
+    color: rgb(255, 108, 50);
+    margin: 2px;
+    font-size: 75px;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
+}
+.grayTeam{
+    color: rgb(12, 153, 24);
+    margin: 2px;
+    font-size: 75px;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
+}
+.resetBtn{
+    margin-top: 30px;
+    padding: 8px 12px;
+    background: red;
+    color: white;
+    border-color: #d30000;
+    border-radius: 5px;
+}
+
+.resetBtn:focus{
+    border: none;
+}
+#notice{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+/* model */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: rgba(0,0,0,0.4);
+    margin: 17% auto; /* 15% from the top and centered */
+    padding: 15px 20px;
+    width: 75%; /* Could be more or less, depending on screen size */
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* strick through */
+
+/* left right */
+.LeftToRightTop::after{
+    position: absolute;
+    content: '';
+    /* left: 0;
+    right: 0; */
+    left: 55px;
+    right: 55px;
+    top: calc(20% - 20px);
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    transform: rotate(180deg);
+    animation-name: leftToRight;
+    animation-timing-function: linear;
+    animation-duration: 250ms;
+}
+.LeftToRightMiddle::after{
+    position: absolute;
+    content: '';
+    left: 55px;
+    right: 55px;
+    top: calc(50% - 10px);
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    transform: rotate(180deg);
+    animation-name: leftToRight;
+    animation-timing-function: linear;
+    animation-duration: 250ms;
+}
+.LeftToRightBottom::after{
+    position: absolute;
+    content: '';
+    left: 55px;
+    right: 55px;
+    top: calc(80% - 4px);
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    transform: rotate(180deg);
+    animation-name: leftToRight;
+    animation-timing-function: linear;
+    animation-duration: 250ms;
+}
+
+/* top bottom */
+.TopToBottomMiddle::after{
+    position: absolute;
+    content: '';
+    left: calc(50% - 4px);
+    top: 46px;
+    bottom: 62px;
+    width: 8px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    animation-name: topToBottom;
+    animation-timing-function: linear;
+    animation-duration: 250ms;
+}
+.TopToBottomLeft::after{
+    position: absolute;
+    content: '';
+    left: calc(20% - 14px);
+    top: 46px;
+    bottom: 62px;
+    width: 8px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    animation-name: topToBottom;
+    animation-timing-function: linear;
+    animation-duration: 250ms;
+}
+.TopToBottomRight::after{
+    position: absolute;
+    content: '';
+    left: calc(79% + 11px);
+    top: 46px;
+    bottom: 62px;
+    width: 8px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    animation-name: topToBottom;
+    animation-timing-function: linear;
+    animation-duration: 250ms;
+}
+
+/* cross assisi */
+.XLeftToRight::after{
+    position: absolute;
+    content: '';
+    left: -31px;
+    right: 0;
+    top: 47%;
+    height: 8px;
+    width: 408px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    transform: rotate(225deg);
+    transition: width 2s linear 5s;
+}
+.XRightToLeft::after{
+    position: absolute;
+    content: '';
+    left: -31px;
+    right: 0;
+    top: 47%;
+    height: 8px;
+    width: 408px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    transform: rotate(-225deg);
+}
+
+@keyframes leftToRight {
+    0%   {right: 295px;}
+    100% {right: 55px;}
+}
+@keyframes topToBottom {
+    0% {bottom: 310px;}
+    100% {bottom: 62px;}
+}
